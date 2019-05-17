@@ -18,7 +18,7 @@ public class GT4500Test {
   @Test
   public void fireTorpedo_Single_Success(){
     // Arrange
-    when(ship.getPrimaryTorpedoStore().getTorpedoCount().thenReturn(0));
+    when(ship.getPrimaryTorpedoStore().getTorpedoCount().thenReturn());
     ship.getPrimaryTorpedoStore().getTorpedoCount();
     verify(ship.getPrimaryTorpedoStore(), times(1)).getTorpedoCount();
     // Act
@@ -31,7 +31,7 @@ public class GT4500Test {
   @Test
   public void fireTorpedo_All_Success(){
     // Arrange
-    when(ship.getPrimaryTorpedoStore().getTorpedoCount().thenReturn(0));
+    when(ship.getPrimaryTorpedoStore().getTorpedoCount().thenReturn());
     ship.getPrimaryTorpedoStore().getTorpedoCount();
     verify(ship.getPrimaryTorpedoStore(), times(1)).getTorpedoCount();
     // Act
