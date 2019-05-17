@@ -8,10 +8,12 @@ import static org.mockito.Mockito.*;
 
 public class GT4500Test {
 
+  @Mock
   private GT4500 ship;
-
+  @Rule public MockitoRule mockitoRule = MockitoJUnit.rule(); 
   @BeforeEach
   public void init(){
+
     this.ship = new GT4500(mock(TorpedoStore.class), mock(TorpedoStore.class));
   }
 
